@@ -1,0 +1,14 @@
+<div class="wrapper" style="text-align:center">
+  <div class="container">
+    <h1 class="title">
+      Welcome to my Audio Recorder using RecorderRTC
+    </h1>
+    <button (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording"> Start Recording </button>
+    <button (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </button>
+    <div></div>
+    <audio controls="" *ngIf="url">
+        <source [src]="sanitize(url)" type="audio/wav">
+    </audio>
+    <h3>Please, click in top button to start to recorder</h3>
+  </div>
+</div>
